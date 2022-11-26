@@ -1,0 +1,92 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2021-12-09T13:30:53-05:00",
+    "name": "MultiMc",
+    "author": "tanawattawillha@gmail.com",
+    "description": "Hello, this is a shit egg that I made.",
+    "features": [
+        "eula",
+        "java_version",
+        "pid_limit"
+    ],
+    "images": [],
+
+    "file_denylist": [
+        "dev.sh",
+        "startup"
+    ],
+    "startup": "bash startup",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \")! For help, type \",\r\n    \"userInteraction\": [\r\n        \"Go to eula.txt for more info.\"\r\n    ]\r\n}",
+        "logs": "{}",
+        "stop": "stop"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho \"Hello\"",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Bot File Name",
+            "description": "",
+            "env_variable": "BOT_FILENAME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:100"
+        },
+        {
+            "name": "NodeJS Version",
+            "description": "",
+            "env_variable": "NODE_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:2"
+        },
+        {
+            "name": "Query Port",
+            "description": "required for teamspeak 3 or teaspeak",
+            "env_variable": "QUERY_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:2000"
+        },
+        {
+            "name": "Additional Python packages",
+            "description": "Install additional python packages.\r\n\r\nUse spaces to separate",
+            "env_variable": "PY_PACKAGES",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string",
+            "field_type": "text"
+        },
+            "name": "Requirements file",
+            "description": "if there are other requirements files to choose from.",
+            "env_variable": "REQUIREMENTS_FILE",
+            "default_value": "requirements.txt",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        {
+            "name": "File Port",
+            "description": "Required for teamspeak 3 or teaspeak",
+            "env_variable": "FILE_PORT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:2000"
+        }
+    ]
+}
